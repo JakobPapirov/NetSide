@@ -1,0 +1,10 @@
+Introduction to the game
+
+The idea behind the game is a mix between the subreddit /r/outside and the computer game nethack.
+My game, Netside, is played out today and is thought to be a simulation of the world with bad stuff happening.
+
+You create a character and you want to improve it while staying alive!
+Your character has the following stats (body):
+Head(s), eye(s), ear(s), arm(s) and leg(s); stats (atributes)
+Intelligence (int), agility (agi), strength (str); and stats (other)
+Health, stamina, focus, vitality
