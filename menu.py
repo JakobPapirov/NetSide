@@ -101,11 +101,11 @@ while menuStateMaster:
             print("")
             print("Loading game!")
             # Later = NetSide(char, charSelfDisc)
-            char, alive = NetSide(char)
+            #char, alive = NetSide(char)
+            char = NetSide(char)
             if not alive:  # if alive == False
                 print("Better luck next time!")  # ask player to create a new char? Restart game?
         elif choiceUsr == 2:
-            print("Retrieving stats...")
             charChecker(char)
             # Commented out to save dev-time
             # input("Press 'Enter' to return to the main menu.")
