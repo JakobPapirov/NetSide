@@ -17,6 +17,7 @@ sys.path.insert(0, './helper')
 from exploration.explore import explore
 from helper.charChecker import charChecker
 from helper.wrongInput import wrongInput
+from helper.netSideExit import netSideExit
 
 def NetSide(char):
 
@@ -47,9 +48,6 @@ def NetSide(char):
         if choiceUsr == 1:
             print("Exploring...")
             char, alive, foodsDiscovered = explore(char)
-
-
-
             if not alive:  # if alive == False
                 gameState = False # exits the game
             # Commented out to save dev-time
@@ -63,9 +61,7 @@ def NetSide(char):
             #print("Press 'Enter' to return to the game menu.")
 
         elif choiceUsr == 999:
-            print("")
-            print("You've chosen to exit the game.")
-            print("Press 'Enter' to return to the main menu.")
+            netSideExit()
             gameState = False
 
         else:
