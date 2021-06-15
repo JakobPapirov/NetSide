@@ -44,7 +44,7 @@ while menuStateMaster:
             print("0. Read the instructions for the game.")
             print("1. Create a character.")
             print("999. Exit the game.")
-            print("-----------------------------")
+            print("---------- Main menu ----------")
             print("")
             choiceUsr = input("What do you want to do [input number and press enter]: ")
             if choiceUsr == "":
@@ -63,7 +63,9 @@ while menuStateMaster:
                 newPlayerCheck = False
                 menuState = False
             elif choiceUsr == 999:
+                # Doesn't work properly, player gets sent to the next while block anyway
                 print("You have chosen to exit the game. Hope you enjoyed playing it!")
+                print("BUG: Doesn't work")
                 #menuStateMaster = False
                 menuState = False
                 newPlayerCheck = False
@@ -106,10 +108,12 @@ while menuStateMaster:
             if not alive:  # if alive == False
                 print("Better luck next time!")  # ask player to create a new char? Restart game?
         elif choiceUsr == 2:
-            charChecker(char)
+            # Perhaps only available 'later'?
+            char = charChecker(char, alive)
             # Commented out to save dev-time
             # input("Press 'Enter' to return to the main menu.")
         elif choiceUsr == 9:
+            # killChar(char) reqs charSelfDisc at the moment
             choiceCheckKill = input("Are you sure you want to kill your character? [Y/n] ")
             subState = True
             while subState:
