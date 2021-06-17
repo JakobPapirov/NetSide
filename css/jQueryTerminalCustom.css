@@ -1,0 +1,18 @@
+/* These styles extends or alters default styles */
+
+
+/* Font-size, 2 = 200% */
+	/* https://terminal.jcubic.pl/api_reference.php#style
+	*/
+    .terminal {
+      --size: 2;
+      --error-color: orange;
+    }
+    /* Comments
+		2 is quite big
+     */
+
+    /* Not working */
+    /*.cmd:focus-within .prompt * {
+    	color: red;
+    }*/
