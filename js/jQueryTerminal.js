@@ -141,6 +141,8 @@ Available commands are:
 		    });
 
 			// Terminal - notepad
+				// Unused ->> VueJS attempt
+				/*
 		    $('#terminal-notepad').terminal(
 		    {
 		    	greetings: 'Notepad',
@@ -148,7 +150,7 @@ Available commands are:
 		        height: 300,
 		        width: '100%',
 		        prompt: ': '
-		    });
+		    });*/
 
 		    // Terminal - Game stats (dynamic)
 		    $("#terminal-charStats").terminal();
