@@ -10,87 +10,101 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Remote assets -->
+			<!-- jQuery -->
 			<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+			<!-- jQuery Terminal -->
 			<script src="https://unpkg.com/jquery.terminal@2.x.x/js/jquery.terminal.min.js"></script>
 			<link rel="stylesheet" href="https://unpkg.com/jquery.terminal@2.x.x/css/jquery.terminal.min.css"/>
+			<!-- VueJS -->
+			<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 		<!-- Local assets -->
 			<!-- CSS -->
-				<link rel="stylesheet" href="css/grid.css">
-				<link rel="stylesheet" href="css/custom.css">
+				<link rel="stylesheet" href="css/tailwindPost.css">
 				<link rel="stylesheet" href="css/jQueryTerminalCustom.css">
 			<!-- JS -->
 				<!--<script src="js/index.js"></script>-->
 				<script src="js/jQueryTerminal.js"></script>
 	</head>
-	<body>
+	<body class="bg-green-200" id="top">
 
-		<!-- Container starts -->
-		<div class="container">
+		<div class="grid grid-cols-3 gap-4 px-8 py-4 bg-gray-400">
+				
+			<div class="row-span-1 col-span-2">
 			
-			<div class="header">
-
-				<div class="header-left">
-					<h1>Logo</h1>
-				</div>
-				<div class="header-middle">
-					<h1>NetSide</h1>
-					<h3>Terminal by <a href="https://terminal.jcubic.pl/" target="_blank" title="jQueryTerminal">Jakub T. Jankiewicz</a></h3>
-				</div>
-				<div class="header-right">
-					<a href="#">Forum</a>
-					<a href="https://github.com" target="_blank"><img src="graphics/GitHub-32.png" alt="Github logo"></a>
-				</div>
+				<h1>NetSide - 2/3 for logo? ACII style</h1>
 			</div>
-
-			<div class="left-top-corner">
-				<p>Left top corner</p>
-				<p>Items?</p>
+			<div class="row-span-1 col-span-1">
+			
+				<a href="https://reddit.com/r/netside">Reddit</a>
+				<a href="#">Discord server</a>
+				<a href="https://github.com" target="_blank"><img src="graphics/GitHub-32.png" alt="Github logo"></a>
 			</div>
-
-			<div class="play-area">
-			</div>
-
-			<div class="right-top-corner">
-				<p>Right top corner</p>
-			</div>
-
-			<div class="game-commands-options">
-
-				<div class="" id="terminal-commands"></div>
-			</div>
-
-			<div class="play-area">
-
-				<div class="" id="terminal-main">
-					
-				</div>
-			</div>
-
-			<div class="right-middle">
-				<!--<p>Right middle</p>
-				<p>Notepad</p>-->
-
-				<div class="" id="terminal-notepad"></div>
-			</div>
-
-			<div class="char-stats">
-				<!--<p>Left bottom corner</p>
-				<p>Dynamic character stats</p>-->
-
-				<div class="" id="terminal-charStats"></div>
-			</div>
-
-			<div class="bottom-middle">
-				<p>Chat area? from gitter?</p>
-				<p><a href="https://sidecar.gitter.im/" target="_blank" title="Gitter chat info">Gitter info</a></p>
-			</div>
-
-			<div class="right-bottom-corner">
-				<p>Right bottom corner</p>
-			</div>
-
 		</div>
-		<!-- Container ends -->
 
+		<!-- Main starts -->
+		<div class="grid grid-cols-4 gap-4 px-4 py-4">
+		
+			<div class="grid grid-rows-3 col-span-1">
+				
+				<div class="row-span-1 col-span-1">
+				
+					<p>Left top corner</p>
+					<p>Items</p>
+					<ul>
+						<li>Consumables (food and water)</li>
+						<li>Str</li>
+						<li>Notes (int and misc)</li>
+						<li>Clothes</li>
+					</ul>
+				</div>
+
+				<div class="row-span-1 col-span-1" id="terminal-commands">
+				</div>
+
+				<div class="row-span-1 col-span-1">
+				
+					<p>Left bottom</p>
+					<p>char stats</p>
+					<div class="" id="terminal-charStats">
+					</div>
+				</div>
+			</div>
+
+			<div class="grid grid-rows-3 col-span-2">
+				
+				<div class="row-span-2 col-span-2" id="terminal-main">
+				</div>
+
+				<div class="row-span-1 col-span-2">
+				
+					<p>I think I'll just go with Reddit &amp; Discord.</p>
+					<p>Space not needed</p>
+					<p><a href="https://sidecar.gitter.im/" target="_blank" title="Gitter chat info">Gitter info</a></p>
+				</div>
+			</div>
+
+			<div class="grid grid-rows-3 col-span-1">
+				
+				<div class="row-span-2 col-span-1" id="notepad">
+					{{ message }}
+				</div>
+
+				<div class="row-span-1 col-span-1">
+				
+					<p>Right bottom corner</p>
+				</div>
+			</div>
+		</div>
+		<!-- Main ends -->
+
+		<footer class=""></footer>
+		<script type="text/javascript">
+			var app = new Vue({
+				  el: '#notepad',
+				  data: {
+				    message: 'Future notepad, in Vue!'
+				  }
+				})
+		</script>
 	</body>
 </html>
