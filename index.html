@@ -3,7 +3,7 @@
 	<head>
 		<title>Games | NetSide</title>
 		
-		<!--<link rel="icon" href="graphics/logo.png" type="image/gif">-->
+		<link rel="icon" href="graphics/favico-32.png" type="image/gif">
 
 		<!-- Meta tags -->
 			<meta charset="UTF-8">
@@ -27,26 +27,32 @@
 	</head>
 	<body class="bg-green-200" id="top">
 
-		<div class="grid grid-cols-3 gap-4 px-8 py-4 bg-gray-400">
+		<div class="grid grid-cols-3 gap-4 px-8 py-4 bg-terminal-bg text-terminal-amber-lt">
 				
 			<div class="row-span-1 col-span-2">
 			
-				<h1>NetSide - 2/3 for logo? ACII style</h1>
+				<h1 class="text-4xl text-center">NetSide</h1>
 			</div>
-			<div class="row-span-1 col-span-1">
+			<div class="grid grid-cols-3 row-span-1 col-span-1">
 			
-				<a href="https://reddit.com/r/netside">Reddit</a>
-				<a href="#">Discord server</a>
-				<a href="https://github.com" target="_blank"><img src="graphics/GitHub-32.png" alt="Github logo"></a>
+				<div class="row-span-1 col-span-1">
+					<a href="https://reddit.com/r/netside" target="_blank" title="Subreddit"><img src="graphics/round-icon-original-reddit-96px.png" alt="Reddit logo"></a>
+				</div>
+				<div class="row-span-1 col-span-1">
+					<a href="#" target="_blank" title="Discord server"><img src="graphics/icons8-discord-96.png" alt="Discord logo"></a>
+				</div>
+				<div class="row-span-1 col-span-1">
+					<a href="https://github.com" target="_blank" title="Github repo"><img src="graphics/coffee-color-96.png" alt="Github logo"></a>
+				</div>
 			</div>
 		</div>
 
 		<!-- Main starts -->
 		<div class="grid grid-cols-4 gap-4 px-4 py-4">
 		
-			<div class="grid grid-rows-3 col-span-1">
+			<div class="grid grid-rows-3 col-span-1 gap-4">
 				
-				<div class="row-span-1 col-span-1">
+				<div class="row-span-1 col-span-1 max-h-25">
 				
 					<p>Left top corner</p>
 					<p>Items</p>
@@ -63,14 +69,12 @@
 
 				<div class="row-span-1 col-span-1">
 				
-					<p>Left bottom</p>
-					<p>char stats</p>
 					<div class="" id="terminal-charStats">
 					</div>
 				</div>
 			</div>
 
-			<div class="grid grid-rows-3 col-span-2">
+			<div class="grid grid-rows-3 col-span-2 gap-4">
 				
 				<div class="row-span-2 col-span-2" id="terminal-main">
 				</div>
@@ -83,7 +87,7 @@
 				</div>
 			</div>
 
-			<div class="grid grid-rows-3 col-span-1">
+			<div class="grid grid-rows-3 col-span-1 gap-4">
 				
 				<div class="row-span-2 col-span-1" id="notepad">
 					{{ message }}
@@ -97,7 +101,21 @@
 		</div>
 		<!-- Main ends -->
 
-		<footer class=""></footer>
+		<footer class="row-span-1 col-span-1 grid grid-cols-4 gap-4 px-8 py-4 bg-terminal-bg text-terminal-amber-lt">
+			<div class="row-span-1 col-span-1">
+				<a href="https://github.com" target="_blank" title="Github repo"><img src="graphics/icons8-github-96.png" alt="Github logo"></a>
+			</div>
+			<div class="row-span-1 col-span-1">
+				<a href="http://jakobpapirov.se" target="_blank" title="Author website"><img src="graphics/" alt="Author logo"></a>
+			</div>
+			<div class="row-span-1 col-span-1">
+				<a href="http://jakobpapirov.se" target="_blank" title="Author website"><img src="graphics/" alt="Linkedin logo"></a>
+			</div>
+			<div class="row-span-1 col-span-1">
+				<a href="https://patreon.com" target="_blank" title="Patreon"><img src="graphics/" alt="Patreon logo"></a>
+			</div>
+		</footer>
+
 		<script type="text/javascript">
 			var app = new Vue({
 				  el: '#notepad',
