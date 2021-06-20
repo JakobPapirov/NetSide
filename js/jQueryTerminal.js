@@ -132,8 +132,8 @@ Available commands are:
 		    }, {
 		        greetings: "[[;blue;black]Game options terminal] \nDevelopment in progress (last update on 2021-05-28) \nDeveloped by: \nJakob Papirov\nType 'options' to see available commands.",
 		        name: 'gameCommands',
-		        height: 298,
-		        width: 456,
+		        height: '25vh',
+		        width: '100%',
 		        prompt: '>>> '
 		    }, {
 		    	// Has to be last, for everything to be read; allows for variable nr of inputs?
@@ -151,9 +151,37 @@ Available commands are:
 		        width: '100%',
 		        prompt: ': '
 		    });*/
-
+		// 1.5
 		    // Terminal - Game stats (dynamic)
-		    $("#terminal-charStats").terminal();
+		    $("#terminal-charStats").terminal(function(command){
+		    	if (command !== '') {
+		    		if (command == 'stats') {
+
+		    			this.echo(`Command ${command} displays characters stats.`);
+		    		} else if (command == 'self') {
+
+		    			this.echo(`Command ${command} displays info about your character.`);
+		    		} else if (command == 'health') {
+		    			`Command ${command} displays characters stats.`
+		    		}else {
+
+						this.echo('Unrecognised command.');
+					}
+		    	}
+		    }, {
+		        greetings: `Here you can check your characters stats and such!\n
+Available commands are:
+[[b;green;black]stats]
+[[b;green;black]self]
+[[b;green;black]health]`,
+		        name: 'playArea',
+		        height: '25vh',
+		        width: '100%',
+		        prompt: '>>> '
+		    }, {
+		    	// Has to be last, for everything to be read
+		    	checkArity: false
+			});
 
 		// https://github.com/jcubic/jquery.terminal/wiki/Getting-Started#masking-password
 		// Works
