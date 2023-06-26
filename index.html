@@ -3,7 +3,7 @@
 	<head>
 		<title>Games | NetSide</title>
 		
-		<link rel="icon" href="graphics/favico-32.png" type="image/gif">
+		<link rel="icon" href="graphics/favico-32-bg-b.png" type="image/gif">
 
 		<!-- Meta tags -->
 			<meta charset="UTF-8">
@@ -27,6 +27,7 @@
 	</head>
 	<body class="bg-green-200" id="top">
 
+		<!-- Header / banner -->
 		<div class="grid grid-cols-3 gap-4 px-8 py-4 bg-terminal-bg text-terminal-amber-lt">
 				
 			<div class="row-span-1 col-span-2">
@@ -50,11 +51,54 @@
 		<!-- Main starts -->
 		<div class="grid grid-cols-4 gap-4 px-4 py-4">
 		
+			<!-- Left 1/4 of real-estate starts -->
 			<div class="grid grid-rows-3 col-span-1 gap-4">
 				
-				<div class="row-span-1 col-span-1 max-h-25">
+				<!-- Top left section -->
+				<div class="row-span-1 col-span-1" id="terminal-items"></div>
+
+				<!-- Mid left section -->
+				<div class="row-span-1 col-span-1" id="terminal-commands">
+				</div>
+
+				<!-- Bottom left section -->
+				<div class="row-span-1 col-span-1">
+					<!-- Why place terminal inside another div? -->
+					<div class="" id="terminal-charStats">
+					</div>
+				</div>
+			</div>
+
+			<!-- Left 2/4 of real-estate starts -->
+			<div class="grid grid-rows-3 col-span-2 gap-4">
 				
-					<p>Left top corner</p>
+				<!-- Main attraction -->
+				<div class="row-span-2 col-span-2" id="terminal-main">
+				</div>
+
+				<!-- Bottom mid (2/4 width, 1/3 height) section -->
+				<div class="row-span-1 col-span-2">
+				
+					<p>I think I'll just go with Reddit &amp; Discord.</p>
+					<p>Space not needed</p>
+					<p><a href="https://gitter.im/" target="_blank" title="Gitter chat info">Gitter info</a></p>
+					<p>An integrated Discord won't work. Perhaps something de-centrelised?</p>
+				</div>
+			</div>
+
+			<!-- Right 1/4 of real-estate starts -->
+			<div class="grid grid-rows-3 col-span-1 gap-4">
+				
+				<!-- Top right (1/3 width, 2/3 height) section -->
+				<div class="row-span-2 col-span-1" id="notepad">
+					{{ message }}
+				</div>
+
+				<!-- Bottom right (1/3 height) section -->
+				<div class="row-span-1 col-span-1">
+				
+					<p>Right bottom corner</p>
+					<p>TEMP FROM : Left top corner</p>
 					<p>Items</p>
 					<ul>
 						<li>Consumables (food and water)</li>
@@ -62,40 +106,6 @@
 						<li>Notes (int and misc)</li>
 						<li>Clothes</li>
 					</ul>
-				</div>
-
-				<div class="row-span-1 col-span-1" id="terminal-commands">
-				</div>
-
-				<div class="row-span-1 col-span-1">
-				
-					<div class="" id="terminal-charStats">
-					</div>
-				</div>
-			</div>
-
-			<div class="grid grid-rows-3 col-span-2 gap-4">
-				
-				<div class="row-span-2 col-span-2" id="terminal-main">
-				</div>
-
-				<div class="row-span-1 col-span-2">
-				
-					<p>I think I'll just go with Reddit &amp; Discord.</p>
-					<p>Space not needed</p>
-					<p><a href="https://sidecar.gitter.im/" target="_blank" title="Gitter chat info">Gitter info</a></p>
-				</div>
-			</div>
-
-			<div class="grid grid-rows-3 col-span-1 gap-4">
-				
-				<div class="row-span-2 col-span-1" id="notepad">
-					{{ message }}
-				</div>
-
-				<div class="row-span-1 col-span-1">
-				
-					<p>Right bottom corner</p>
 				</div>
 			</div>
 		</div>
@@ -106,13 +116,13 @@
 				<a href="https://github.com" target="_blank" title="Github repo"><img src="graphics/icons8-github-96.png" alt="Github logo"></a>
 			</div>
 			<div class="row-span-1 col-span-1">
-				<a href="http://jakobpapirov.se" target="_blank" title="Author website"><img src="graphics/" alt="Author logo"></a>
+				<a href="http://jakobpapirov.se" target="_blank" title="Author website"><img src="graphics/logo.svg" alt="Author logo"></a>
 			</div>
 			<div class="row-span-1 col-span-1">
-				<a href="http://jakobpapirov.se" target="_blank" title="Author website"><img src="graphics/" alt="Linkedin logo"></a>
+				<a href="http://jakobpapirov.se" target="_blank" title="Author website"><img src="graphics/icons8-linkedin-32.png" alt="Linkedin logo"></a>
 			</div>
 			<div class="row-span-1 col-span-1">
-				<a href="https://patreon.com" target="_blank" title="Patreon"><img src="graphics/" alt="Patreon logo"></a>
+				<a href="https://patreon.com" target="_blank" title="Patreon"><img src="graphics/icons8-patreon-50.png" alt="Patreon logo"></a>
 			</div>
 		</footer>
 
@@ -120,7 +130,7 @@
 			var app = new Vue({
 				  el: '#notepad',
 				  data: {
-				    message: 'Future notepad, in Vue!'
+				    message: 'Future notepad, in Vue! This text is printed via Vue2.'
 				  }
 				})
 		</script>
