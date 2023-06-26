@@ -1,7 +1,15 @@
 # NetSide
 
-CSS will be handled by TailwindCSS
+## Current branch
+Current branch superseeds font-end branch!
 
-In this branch I'll commit front-end related code (JS). Another part is the core mechanics of the game, located in its own branch (Python). A third branch houses the back-end (Django).
+### Tech stack
+HTML : -
+CSS : TailwindCSS 
+JS : [1] https://github.com/jcubic/jquery.terminal/ - temrinal emulator [2] Vanilla & jQuery - player-interaction [3] VueJS - Notepad functionality
 
-As each component is ready for merger, I'll push to master branch and it'll become master again. Presently, game-dev is the default branch.
+## game-dev branch
+Local development of core game mechanics, only playable on a local machine on Python (3).
+
+## Backend branch
+local Development on the Django-backend, before publication.
